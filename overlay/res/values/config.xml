@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Separate Notifications and Quick Settings panels until the user picks a layout on the
+         Shade panels page in Settings (patch 0005). -->
+    <bool name="config_dualShadeEnabledByDefault">true</bool>
+    <!-- Notifications open on the right, next to Quick Settings. -->
+    <bool name="config_notificationShadeOnTopEnd">true</bool>
+    <!-- Desktop status bar: clock left, notification and Quick Settings chips right. -->
+    <bool name="config_useDesktopStatusBar">true</bool>
+    <!-- Volume slider in the Quick Settings panel (the volume dialog stays hidden while it shows;
+         patch 0003). -->
+    <bool name="config_enableDesktopAudioTileDetailsView">true</bool>
+</resources>

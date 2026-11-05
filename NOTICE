@@ -1,0 +1,14 @@
+dual-shade
+Copyright (C) 2026 Navotpala Tech (Bliss Co-Labs Inc.)
+Licensed under the GNU Affero General Public License v3.0 (LICENSE) or a commercial license
+(LICENSE_COMMERCIAL). See LICENSING.md.
+
+This product includes material from the Android Open Source Project
+(https://source.android.com), licensed under the Apache License, Version 2.0:
+
+  - The frameworks/base files that patches/ change. Those files remain under the Apache
+    License, Version 2.0, Copyright (C) The Android Open Source Project; the changes are under
+    dual-shade's license.
+
+A copy of the Apache License, Version 2.0 is available at
+https://www.apache.org/licenses/LICENSE-2.0

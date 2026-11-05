@@ -1,0 +1,15 @@
+// Copyright (C) 2026 Navotpala Tech (Bliss Co-Labs Inc.)
+// SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Navotpala-Commercial
+
+// License metadata for the build's notice files and compliance reports. Every module in
+// vendor/dual-shade names it through package { default_applicable_licenses }. See LICENSING.md.
+license {
+    name: "vendor_dual-shade_license",
+    visibility: [":__subpackages__"],
+    license_kinds: ["SPDX-license-identifier-AGPL-3.0-only"],
+    license_text: [
+        "LICENSE",
+        "LICENSE_COMMERCIAL",
+        "NOTICE",
+    ],
+}
