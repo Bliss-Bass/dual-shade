@@ -4,15 +4,24 @@ SystemUI's Dual Shade for large-screen Android 16 builds (LineageOS 23.2), packa
 `vendor/dual-shade` repo you can drop into a source tree.
 
 Dual Shade splits the pull-down shade into two floating panels: Notifications and Quick Settings,
-each opened from its own corner of the status bar. Android 16 has it, but it's switched off in
-release builds and has a few bugs once switched on. This repo switches it on and fixes them:
+each opened from its own chip on the status bar.
+
+| Notifications | Quick Settings |
+|---|---|
+| ![Notifications panel](docs/images/notifications.png) | ![Quick Settings panel](docs/images/quick-settings.png) |
+
+*Both panels open at the top right over a desktop window, under the desktop status bar (clock on
+the left, panel chips on the right). Quick Settings has the volume slider under brightness.*
+
+Android 16 has Dual Shade, but it's switched off in release builds and has a few bugs once
+switched on. This repo switches it on and fixes them:
 
 - the two SystemUI feature flags Dual Shade needs, set at build time;
 - a SystemUI overlay that makes Dual Shade the default, puts both panels on the right under a
   desktop status bar, and adds a volume slider to Quick Settings;
 - five small SystemUI patches: four bug fixes and the setting default.
 
-It is meant for large screens (tablets, desktops, x86 PCs). [retro-style](https://github.com/Bliss-Bass/retro-style)
+It is meant for large screens (tablets, desktops, x86 PCs). [vendor/retro-style](../retro-style)
 builds on it, and so can any other component that wants the floating panels.
 
 ## Requirements
@@ -27,7 +36,7 @@ builds on it, and so can any other component that wants the floating panels.
    config map refer to it.
 
    ```sh
-   git clone https://github.com/Bliss-Bass/dual-shade vendor/dual-shade
+   git clone <dual-shade repo URL> vendor/dual-shade
    ```
 
    Or add it to `.repo/local_manifests/dual-shade.xml` and `repo sync vendor/dual-shade`.
