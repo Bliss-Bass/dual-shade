@@ -12,7 +12,7 @@ release builds and has a few bugs once switched on. This repo switches it on and
   desktop status bar, and adds a volume slider to Quick Settings;
 - five small SystemUI patches: four bug fixes and the setting default.
 
-It is meant for large screens (tablets, desktops, x86 PCs). [vendor/retro-style](../retro-style)
+It is meant for large screens (tablets, desktops, x86 PCs). [retro-style](https://github.com/Bliss-Bass/retro-style)
 builds on it, and so can any other component that wants the floating panels.
 
 ## Requirements
@@ -27,7 +27,7 @@ builds on it, and so can any other component that wants the floating panels.
    config map refer to it.
 
    ```sh
-   git clone <dual-shade repo URL> vendor/dual-shade
+   git clone https://github.com/Bliss-Bass/dual-shade vendor/dual-shade
    ```
 
    Or add it to `.repo/local_manifests/dual-shade.xml` and `repo sync vendor/dual-shade`.
