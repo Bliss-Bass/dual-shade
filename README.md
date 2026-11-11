@@ -108,7 +108,7 @@ built into the image may replace any of them.
 ### 3. The patches
 
 Turning the scene container on exposes a few unfinished parts of AOSP. The patches are
-`git format-patch` files in `patches/frameworks/base/`:
+`git format-patch` files in `patches/api-<level>/frameworks/base/` (`api-36` for Android 16):
 
 | # | Patch | What it fixes |
 |---|---|---|
@@ -122,7 +122,7 @@ The series applies to the LineageOS `lineage-23.2` branch and is independent of 
 series (retro-style's applies before or after it).
 
 **Updating a patch:** change the code in `frameworks/base`, amend or add a commit, then export
-it again with `git format-patch` into `patches/frameworks/base/`, keeping the numbering. Never
+it again with `git format-patch` into `patches/api-<level>/frameworks/base/`, keeping the numbering. Never
 edit a `.patch` file by hand.
 
 **After a `repo sync`:** if upstream changed code a patch touches, `apply-patches.sh check`
