@@ -93,6 +93,8 @@ aconfig flags get their values from the release config. `config/aconfig/` sets b
 Android 17 also gates Dual Shade behind `com.android.systemui.dual_shade`. Trees with a `cp2a`
 release use `config/aconfig/cp2a/` instead, which sets all three flags for `cp2a`;
 `dual_shade.mk` picks it when `build/release/aconfig/cp2a` exists.
+Android 17 releases don't allow READ_WRITE values for system flags, so the cp2a values are
+READ_ONLY (set at build time only).
 
 Values set at build time work everywhere. On-device overrides (`aflags`, `device_config`) need
 the `aconfigd` service and a `/metadata` partition, which not every device has (x86 images don't).
