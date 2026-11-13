@@ -10,4 +10,7 @@
     <!-- Volume slider in the Quick Settings panel (the volume dialog stays hidden while it shows;
          patch 0003). -->
     <bool name="config_enableDesktopAudioTileDetailsView">true</bool>
+    <!-- Android 17 hides the Notifications & Quick Settings layout choice on sw600dp and up
+         and ignores the dual_shade setting there; let users pick (see overlay-settings/). -->
+    <bool name="config_useDualShadeSetting">true</bool>
 </resources>

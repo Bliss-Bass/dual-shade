@@ -19,7 +19,8 @@ DUAL_SHADE_DIR := vendor/dual-shade
 # SystemUI config: Dual Shade on by default, desktop status bar, panels on the right, Quick
 # Settings volume slider (overlay/).
 PRODUCT_PACKAGES += \
-    DualShadeSystemUI
+    DualShadeSystemUI \
+    DualShadeSettings
 
 # The SystemUI aconfig flags Dual Shade needs, set at build time (config/aconfig/). Android 17
 # trees (cp2a release) also need dual_shade itself; they get the cp2a set instead of the bp4a

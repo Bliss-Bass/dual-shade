@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Let users choose separate or combined Notifications and Quick Settings panels. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.dualshade.settings">
+    <overlay
+        android:targetPackage="com.android.settings"
+        android:priority="5"
+        android:isStatic="true" />
+    <application android:hasCode="false" android:label="Dual Shade (Settings)" />
+</manifest>
