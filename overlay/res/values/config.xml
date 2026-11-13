@@ -13,4 +13,8 @@
     <!-- Android 17 hides the Notifications & Quick Settings layout choice on sw600dp and up
          and ignores the dual_shade setting there; let users pick (see overlay-settings/). -->
     <bool name="config_useDualShadeSetting">true</bool>
+    <!-- WM Shell: keep the app handle's input layer over the status bar. With scene_container
+         the status bar sends every downward drag to the shade, so without this layer the handle
+         can no longer be dragged into freeform (Android 17 defaults this to true). -->
+    <bool name="config_removeStatusBarInputLayer">false</bool>
 </resources>
