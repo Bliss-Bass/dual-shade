@@ -3,7 +3,7 @@
 
 #
 # vendor/dual-shade: SystemUI's Dual Shade (separate floating Notifications and Quick Settings
-# panels) for large-screen Android 16 / LineageOS 23.2 builds.
+# panels) for large-screen Android 16 / LineageOS 23.2 and Android 17 / LineageOS 24.0 builds.
 #
 # Use it from your device (or product) makefile:
 #
@@ -21,6 +21,13 @@ DUAL_SHADE_DIR := vendor/dual-shade
 PRODUCT_PACKAGES += \
     DualShadeSystemUI
 
-# The two SystemUI aconfig flags Dual Shade needs, set at build time (config/aconfig/).
+# The SystemUI aconfig flags Dual Shade needs, set at build time (config/aconfig/). Android 17
+# trees (cp2a release) also need dual_shade itself; they get the cp2a set instead of the bp4a
+# one. TARGET_RELEASE is unset while maps are collected, so check for the release directly.
+ifneq ($(wildcard build/release/aconfig/cp2a),)
+PRODUCT_RELEASE_CONFIG_MAPS += \
+    $(DUAL_SHADE_DIR)/config/aconfig/cp2a/release_config_map.textproto
+else
 PRODUCT_RELEASE_CONFIG_MAPS += \
     $(DUAL_SHADE_DIR)/config/aconfig/release_config_map.textproto
+endif

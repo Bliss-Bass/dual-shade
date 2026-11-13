@@ -28,6 +28,8 @@ builds on it, and so can any other component that wants the floating panels.
 
 - A LineageOS 23.2 tree (Android 16 QPR2, release `bp4a`). Other AOSP-based Android 16 trees work
   too if their `frameworks/base` matches closely enough for the patches.
+- Or a LineageOS 24.0 tree (Android 17, release `cp2a`). Android 17 ships Dual Shade upstream, so
+  only the flags and the overlay are needed; there are no `api-37` patches.
 - A large-screen device (smallest width 600dp or more).
 
 ## Install
@@ -87,6 +89,10 @@ aconfig flags get their values from the release config. `config/aconfig/` sets b
 - `release_config_map.textproto` and `release_configs/bp4a.textproto`: add the value set to the
   `bp4a` release
 - `dual_shade.mk`: `PRODUCT_RELEASE_CONFIG_MAPS` adds the map to your product
+
+Android 17 also gates Dual Shade behind `com.android.systemui.dual_shade`. Trees with a `cp2a`
+release use `config/aconfig/cp2a/` instead, which sets all three flags for `cp2a`;
+`dual_shade.mk` picks it when `build/release/aconfig/cp2a` exists.
 
 Values set at build time work everywhere. On-device overrides (`aflags`, `device_config`) need
 the `aconfigd` service and a `/metadata` partition, which not every device has (x86 images don't).

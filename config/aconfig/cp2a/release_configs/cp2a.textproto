@@ -1,0 +1,3 @@
+# Contribution to the cp2a release: append dual-shade's aconfig value set.
+name: "cp2a"
+aconfig_value_sets: "aconfig_value_set-dual-shade-cp2a"

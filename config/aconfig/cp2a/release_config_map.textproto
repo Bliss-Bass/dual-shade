@@ -1,0 +1,9 @@
+# Adds dual-shade's aconfig values to the cp2a release (LineageOS 24.0 builds lunch
+# lineage_<device>-cp2a-<variant>). dual_shade.mk only adds this map when the tree has a
+# cp2a release, so Android 16 trees keep using ../release_config_map.textproto.
+description: "dual-shade: SystemUI Dual Shade (dual_shade, scene_container, status_bar_for_desktop)"
+# A map that contributes to a release must list the containers its flags may live in.
+default_containers: "product"
+default_containers: "system"
+default_containers: "system_ext"
+default_containers: "vendor"

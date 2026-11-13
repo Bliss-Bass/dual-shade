@@ -1,0 +1,21 @@
+// Copyright (C) 2026 Navotpala Tech (Bliss Co-Labs Inc.)
+// SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Navotpala-Commercial
+
+package {
+    default_applicable_licenses: ["vendor_dual-shade_license"],
+}
+
+// Android 17 (LineageOS 24.0, release cp2a) ships Dual Shade upstream behind dual_shade and
+// scene_container; status_bar_for_desktop keeps the desktop status bar. All three are off in
+// cp2a, so these modules set them at build time for that release.
+
+aconfig_values {
+    name: "aconfig-values-dual-shade-cp2a-com.android.systemui-all",
+    package: "com.android.systemui",
+    srcs: ["*_flag_values.textproto"],
+}
+
+aconfig_value_set {
+    name: "aconfig_value_set-dual-shade-cp2a",
+    values: ["aconfig-values-dual-shade-cp2a-com.android.systemui-all"],
+}
